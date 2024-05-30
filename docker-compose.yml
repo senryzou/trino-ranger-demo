@@ -31,6 +31,7 @@ services:
     #build: ranger-admin
     container_name: ranger-admin
     hostname: ranger-admin
+    always-start: start
     entrypoint: /root/ranger-admin/docker-entrypoint.sh
     deploy:
       resources:
@@ -51,6 +52,7 @@ services:
     hostname: localhost-trino
     user: root
     container_name: localhost-trino
+    always-start: false
     entrypoint: /root/docker-entrypoint.sh
     networks:
       - trino-ranger-demo
