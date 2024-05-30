@@ -4,7 +4,7 @@ from apache_ranger.model.ranger_policy  import *
 import json
 
 ## Step 1: create a client to connect to Apache Ranger admin
-ranger_url  = 'http://localhost:6080'
+ranger_url  = 'https://localhost:6080'
 ranger_auth = ('admin', 'Rangeradmin1')
 
 ranger = RangerClient(ranger_url, ranger_auth)
