@@ -45,6 +45,7 @@ services:
           memory: 5G
     ports:
       - 6080:6080
+      - 6182:6182
     networks:
       - trino-ranger-demo
     volumes:
