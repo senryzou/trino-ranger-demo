@@ -57,6 +57,7 @@ services:
     volumes:
       - ./trino/install.properties:/root/install.properties
       - ./trino/docker-entrypoint.sh:/root/docker-entrypoint.sh
+      - ./trino/tls/test-ssl-keystore.jks:/root/test-ssl-keystore.jks
     ports:
       - 8080:8080
 networks:
