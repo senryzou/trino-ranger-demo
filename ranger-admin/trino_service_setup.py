@@ -8,6 +8,7 @@ ranger_url  = 'https://localhost:6182'
 ranger_auth = ('admin', 'Rangeradmin1')
 
 ranger = RangerClient(ranger_url, ranger_auth)
+ranger.session.verify = False
 trino_service_file=open('/root/ranger-admin/trino-service.json')
 trino_service=json.load(trino_service_file)
 
