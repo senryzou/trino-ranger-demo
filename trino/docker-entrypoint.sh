@@ -1,5 +1,14 @@
 #!/bin/bash
-microdnf install gzip -y
+microdnf install gzip wget vi procps-ng -y
+
+cat >> /etc/trino/jvm.config <<"EOF"
+-Djavax.net.ssl.keyStore=/root/tls/test-ssl-keystore.jks
+-Djavax.net.ssl.keyStorePassword=password
+-Djavax.net.ssl.trustStore=/root/tls/test-ssl-truststore.jks
+-Djavax.net.ssl.trustStorePassword=password
+-Djavax.net.ssl.trustStoreType=jks
+EOF
+
 RANGER_VERSION=ranger-3.0.0-SNAPSHOT-trino-plugin-436
 TAR_FILE=/root/${RANGER_VERSION}.tar.gz
 cd /root
