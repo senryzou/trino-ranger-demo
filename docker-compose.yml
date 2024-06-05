@@ -66,6 +66,7 @@ services:
       - ./trino/tls:/root/tls
     ports:
       - 8080:8080
+      - 8443:8443
 networks:
   trino-ranger-demo:
     driver: bridge
