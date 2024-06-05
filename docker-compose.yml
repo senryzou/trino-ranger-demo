@@ -52,7 +52,7 @@ services:
       - ./ranger-admin:/root/ranger-admin
   trino:
     #image: trinodb/trino:449
-    image: trinodb/trino:latest
+    image: trinodb/trino:439
     hostname: localhost-trino
     user: root
     container_name: localhost-trino
